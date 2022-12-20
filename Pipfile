@@ -11,6 +11,8 @@ dj-database-url = "*"
 django = "==4.1"
 psycopg2-binary = "*"
 djangorestframework = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
