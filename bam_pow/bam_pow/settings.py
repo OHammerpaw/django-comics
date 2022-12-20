@@ -14,6 +14,7 @@ import os
 import sys
 import dj_database_url
 
+
 # .env config:
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
@@ -28,7 +29,7 @@ if os.getenv('ENV') == 'development':
       'NAME': 'comicsdatabase',
   }
   # Set debug to true
-  DEBUG = True
+  DEBUG = False
   # Only allow locally running client at port 3000 for CORS
   CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 else:
@@ -49,6 +50,8 @@ else:
 DATABASES = {
     'default': DB
 }
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
