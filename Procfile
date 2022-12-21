@@ -1,1 +1,1 @@
-web: gunicorn bam_pow/bam_pow.wsgi --log-file -
+web: gunicorn bam_pow.wsgi --log-file -
