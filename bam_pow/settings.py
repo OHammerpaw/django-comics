@@ -29,7 +29,7 @@ if os.getenv('ENV') == 'development':
       'NAME': 'comicsdatabase',
   }
   # Set debug to true
-  DEBUG = False
+  DEBUG = True
   # Only allow locally running client at port 3000 for CORS
   CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 else:
