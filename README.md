@@ -1,5 +1,5 @@
 # django-comics
-
+[Deployed link](https://bampow.netlify.app)
 ## Technologies Used
 
   - [Django]
